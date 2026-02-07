@@ -1,3 +1,5 @@
+import {articlesData} from '../data/articles';
+
 function HomePage() {
   return (
     <div>
