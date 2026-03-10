@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #F5F0E8;
+  color: #1a1814;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.wp-nav {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(26,24,20,0.1);
+}
+
+.wp-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1a1814;
+}
+
+.wp-tagline {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+}
+
+.wp-home {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.wp-intro {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(26,24,20,0.08);
+}
+
+.wp-intro-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  margin-bottom: 1.2rem;
+}
+
+.wp-intro-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #1a1814;
+  margin-bottom: 1.2rem;
+}
+
+.wp-intro-body {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #5a5040;
+  max-width: 520px;
+}
+
+.wp-category-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.wp-card {
+  background: #FDFAF4;
+  border: 1px solid rgba(26,24,20,0.08);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.wp-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #C4A882;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.wp-card:hover::before { transform: scaleY(1); }
+.wp-card:hover { background: #FBF7EF; transform: translateX(4px); }
+
+.wp-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #1a1814;
+  margin-bottom: 0.6rem;
+}
+
+.wp-card-summary {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #6a5f50;
+}
+
+.wp-card-arrow {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #C4A882;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wp-card:hover .wp-card-arrow { opacity: 1; }
+
+.wp-article {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wp-back {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.wp-back:hover { color: #1a1814; }
+
+.wp-article-category {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4A882;
+  margin-bottom: 1rem;
+}
+
+.wp-article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 300;
+  line-height: 1.25;
+  color: #1a1814;
+  margin-bottom: 1.5rem;
+}
+
+.wp-article-summary {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5040;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(26,24,20,0.08);
+  margin-bottom: 2.5rem;
+}
+
+.wp-pattern-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  border: 1px solid rgba(138,126,110,0.3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 2px;
+  margin-bottom: 3rem;
+}
+
+.wp-reflection-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  margin-bottom: 2rem;
+}
+
+.wp-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  color: #1a1814;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.wp-progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 2.5rem;
+}
+
+.wp-progress-dot {
+  width: 24px;
+  height: 2px;
+  background: rgba(26,24,20,0.12);
+  transition: background 0.4s ease;
+}
+
+.wp-progress-dot.active { background: #C4A882; }
+.wp-progress-dot.done { background: rgba(26,24,20,0.3); }
+
+.wp-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.wp-option {
+  padding: 1rem 1.4rem;
+  background: transparent;
+  border: 1px solid rgba(26,24,20,0.12);
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #3a3020;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+}
+
+.wp-option:hover {
+  background: #F0EAD8;
+  border-color: rgba(26,24,20,0.2);
+  transform: translateX(6px);
+}
+
+.wp-option.selected {
+  background: #1a1814;
+  color: #F5F0E8;
+  border-color: #1a1814;
+}
+
+.wp-counter {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #aaa090;
+  text-align: right;
+}
+
+.wp-pattern-reveal {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background: #1a1814;
+  color: #F5F0E8;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.wp-pattern-reveal-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7e6e;
+  margin-bottom: 1rem;
+}
+
+.wp-pattern-reveal-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  color: #F5F0E8;
+  margin-bottom: 1.5rem;
+}
+.wp-pattern-reveal-sub {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #8a7e6e;
+}
+.wp-back-home {
+  margin-top: 1.5rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4A882;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.wp-back-home:hover { color: #F5F0E8; }
+
