@@ -11,7 +11,7 @@ function App() {
     <Link to="/" className="wp-logo" style={{ textDecoration: "none" }}>
   ◦ Worldprint
 </Link>
-<span className="wp-tagline">The world outside is the world inside</span>
+<span className="wp-tagline">What moves the world, moves in you</span>
       </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
